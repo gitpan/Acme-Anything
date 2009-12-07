@@ -1,7 +1,7 @@
+#!perl
 use strict;
-use warnings;
+use 5.008;
 use ExtUtils::MakeMaker;
-use 5.8.0;
 
 WriteMakefile(
     NAME          => 'Acme::Anything',

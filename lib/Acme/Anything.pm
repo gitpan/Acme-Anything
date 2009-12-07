@@ -1,14 +1,18 @@
 package Acme::Anything;
 use strict;
+use 5.008;
 use warnings;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
-push @INC, sub {
-    open my ($fh), '<', \1
+push @INC, \ &fake_module;
+
+sub fake_module {
+    my $source_code = '1';
+    open my ($fh), '<', \ $source_code
         or die "Can't open a psudeo-file: $!";
     return $fh;
-};
+}
 
 no warnings;    ## no critic
 'Warning! The consumption of alcohol may cause you to think you have mystical kung-fu powers.'

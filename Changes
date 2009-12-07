@@ -1,5 +1,8 @@
 Revision history for Acme-Anything
 
+0.03    2009-12-06
+        Makefile.PL is 5.005 safe so CPAN testers can fail nicer
+
 0.01    Date/time
         First version, released on an unsuspecting world.
 
